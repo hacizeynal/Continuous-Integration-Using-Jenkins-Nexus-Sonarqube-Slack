@@ -11,3 +11,9 @@ We will build Continuous Integration pipeline and following tools will be used
 * SonarQube > Code Analysis Server 
 * AWS EC2 > Compute Resource
 
+### Workflow
+
+[![Screenshot-2022-10-23-at-23-19-11.png](https://i.postimg.cc/nzJ15MXK/Screenshot-2022-10-23-at-23-19-11.png)](https://postimg.cc/xk6HNfyq)
+
+
+
