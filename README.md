@@ -68,6 +68,23 @@ We will create repositories with following name on Sonatype Nexus
 * devops-snapshot >> will be used in case of snapshots
 * devops-group >> to group all repositories
 
+### Configuration on Jenkins
+
+####  Global Tool Configuration
+We will need to enable following Tools on Jenkins in order to run successfull pipeline
+
+* Oracle JDK installation (we will need to provide our private Oracle credentials in order to download JDK from Oracle)
+* Maven installation
+
+#### Credentials
+
+We will need to add Nexus Credentials on Jenkins
+
+
+
+
+
+
 
 
 
