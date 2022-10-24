@@ -62,6 +62,7 @@ Oct 24 19:32:54 ip-172-18-154-251.ec2.internal systemd[1]: Started nexus service
 ```
 We will create repositories with following name 
 
+
 * devops-release >> for storing artifacts
 * devops-maven-central >> will be used for downloading dependencies for Maven from Jenkins.
 * devops-snapshot >> will be used in case of snapshots
