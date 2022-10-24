@@ -60,7 +60,7 @@ Oct 24 19:32:54 ip-172-18-154-251.ec2.internal systemd[1]: Started nexus service
 [root@ip-172-18-154-251 ~]# 
 
 ```
-We will create repositories with following name 
+We will create repositories with following name on Sonatype Nexus
 
 
 * devops-release >> for storing artifacts
