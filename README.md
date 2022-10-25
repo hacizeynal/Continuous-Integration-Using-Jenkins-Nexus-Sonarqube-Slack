@@ -94,9 +94,33 @@ After running successfull pipeline ,in 2nd and 3rd stage will generate report ,w
 
 [![Screenshot-2022-10-25-at-23-01-35.png](https://i.postimg.cc/x87zNkKf/Screenshot-2022-10-25-at-23-01-35.png)](https://postimg.cc/y3mdw8Qt)
 
-Those reports are not human readable ,in order to analyse ,store and present them on dashboard we will need tool named SonarQube server.
+Those reports are not human readable ,in order to analyse ,store and present them on dashboard we will need tool named SonarQube server.This dashboard will present code analysis and unit tests results.
 
+### Configuration on SonarQube Server
 
+We will need code on Jenkins pipeline which generate report based on code analysis and upload it to the SonarQube Server.We will need following tool and information on Jenkins.
+
+* SonarScanner Tool
+* SonarQube Server information
+
+From Jenkins Tool configuration we will need to add SonarQube Scanner ,then we will need to navigate to Configure Jenkins section and add our private ip and token of SonarQube Scanner for integration.
+
+After successfull run of pipeline we can following logs on console output ,which means that ANALYSIS is successfull and we can check output on our SonarQube Server.
+
+```
+INFO: CPD Executor Calculating CPD for 14 files
+INFO: CPD Executor CPD calculation finished (done) | time=51ms
+INFO: Analysis report generated in 160ms, dir size=262 KB
+INFO: Analysis report compressed in 173ms, zip size=98 KB
+INFO: Analysis report uploaded in 310ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://172.18.150.252/dashboard?id=vprofile
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://172.18.150.252/api/ce/task?id=AYQRSZKnkW0txDCYt5pJ
+INFO: Analysis total time: 16.003 s
+INFO: ---------------------------------------------------------
+
+```
+[![Screenshot-2022-10-26-at-00-39-04.png](https://i.postimg.cc/3rgCbhgd/Screenshot-2022-10-26-at-00-39-04.png)](https://postimg.cc/YjCWhJDH)
 
 
 
