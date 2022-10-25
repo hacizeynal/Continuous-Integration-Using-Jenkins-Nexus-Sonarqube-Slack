@@ -19,10 +19,29 @@ pipeline{
 
     stages{
         stage("Build"){
-            //step to pass Unit Tests and pass parameters from setting.xml and install dependencies.
+            //step to skip Unit Tests and pass parameters from settings.xml and install dependencies.
             steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
+            post{
+                success {
+                echo "Now archiving"
+                archiveArtifacts artifacts: '**/*.war'
+
+                }
+            }
+        }
+        stage("Test"){
+            steps {
+                sh 'mvn test'
+            }
+
+        }
+        stage("Checkstyle Analysys"){
+            steps {
+                sh "mvn checkstyle:checkstyle"
+            }    
+    
         }
     }
 }
