@@ -32,14 +32,16 @@ pipeline{
             }
         }
         stage("Test"){
+            // Execute Unit Test
             steps {
-                sh 'mvn test'
+                sh 'mvn -s settings.xml test'
             }
 
         }
         stage("Checkstyle Analysys"){
+            // Execute Checkstyle analysis and generates a report on violations.
             steps {
-                sh "mvn checkstyle:checkstyle"
+                sh "mvn -s settings.xml checkstyle:checkstyle"
             }    
     
         }
