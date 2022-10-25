@@ -88,6 +88,13 @@ GitHub will send a POST request to the URL **(http://ip_address_of_Jenkins:/8080
 
 Please make sure that Jenkins security group is allowing port 8080 from anywhere.
 
+#### Checking Reports
+
+After running successfull pipeline ,in 2nd and 3rd stage will generate report ,we can check those reports on **Workspace/target** directory.
+
+[![Screenshot-2022-10-25-at-23-01-35.png](https://i.postimg.cc/x87zNkKf/Screenshot-2022-10-25-at-23-01-35.png)](https://postimg.cc/y3mdw8Qt)
+
+Those reports are not human readable ,in order to analyse ,store and present them on dashboard we will need tool named SonarQube server.
 
 
 
