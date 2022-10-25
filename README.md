@@ -80,7 +80,13 @@ We will need to enable following Tools on Jenkins in order to run successfull pi
 
 We will need to add Nexus Credentials on Jenkins
 
+#### GitHub Webhook
 
+In order to run job automatically we should enable GitHub Webhook ,in each commit job will run automatically without human interaction.
+
+GitHub will send a POST request to the URL **(http://ip_address_of_Jenkins:/8080/github-webhook)** with details of any subscribed events. We can also specify which data format you’d like to receive (JSON, x-www-form-urlencoded, etc). 
+
+Please make sure that Jenkins security group is allowing port 8080 from anywhere.
 
 
 
