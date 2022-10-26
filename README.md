@@ -162,13 +162,24 @@ Finished: FAILURE
 We will enable Build Timestamp Plugin in order to add versioning tag to the different version of Artifacts and we will upload all those artifacts to the Nexus Sonartype Repository.
 After successful running of pipeline we can confirm that artifacts **BUILD_ID 20 and 21** are uploaded to Nexus Artifact Repository.
 
-From Jenkins Dashboard
+**From Jenkins Dashboard**
 
 [![Screenshot-2022-10-26-at-12-26-23.png](https://i.postimg.cc/PxG16L7C/Screenshot-2022-10-26-at-12-26-23.png)](https://postimg.cc/McDcHGqw)
 
-From NexusSonatype Dashboard
+**From NexusSonatype Dashboard**
 
 [![Screenshot-2022-10-26-at-12-27-17.png](https://i.postimg.cc/52L4B687/Screenshot-2022-10-26-at-12-27-17.png)](https://postimg.cc/686xw6jn)
+
+### Configuration on Slack Server
+
+We will build a Notification system with the help of the Slack server, so we will be notified if we have failed or successfully executed of Jenkins job.Following actions are needed to complete integration.
+
+* Install **Slack Notification plugin** on Jenkins 
+* Need to have login credenstials for Slack ,we will need to add Jenkins to Slack App directory and register our Slack channel ,**security token** should be obtained and used on Jenkinks Slack plugin.
+
+The following screenshot shows that our integration is good and we are receiving both failed and successfully completed job notifications.
+
+[![Screenshot-2022-10-26-at-18-12-03.png](https://i.postimg.cc/k5LdVNxX/Screenshot-2022-10-26-at-18-12-03.png)](https://postimg.cc/CZC2XqPW)
 
 
 
