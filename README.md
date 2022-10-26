@@ -160,6 +160,13 @@ Finished: FAILURE
 #### Setting up Build Timestamp
 
 We will enable Build Timestamp Plugin in order to add versioning tag to the different version of Artifacts and we will upload all those artifacts to the Nexus Sonartype Repository.
+After successful running of pipeline we can confirm that artifacts **BUILD_ID 20 and 21** are uploaded to Nexus Artifact Repository.
+
+[![Screenshot-2022-10-26-at-12-26-23.png](https://i.postimg.cc/PxG16L7C/Screenshot-2022-10-26-at-12-26-23.png)](https://postimg.cc/McDcHGqw)
+
+[url=https://postimg.cc/686xw6jn][img]https://i.postimg.cc/686xw6jn/Screenshot-2022-10-26-at-12-27-17.png[/img][/url]
+
+
 
 
 
