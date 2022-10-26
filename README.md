@@ -157,6 +157,10 @@ Finished: FAILURE
 
 [![Screenshot-2022-10-26-at-09-27-07.png](https://i.postimg.cc/JtV4KxsF/Screenshot-2022-10-26-at-09-27-07.png)](https://postimg.cc/wR2pjhc5)
 
+#### Setting up Build Timestamp
+
+We will enable Build Timestamp Plugin in order to add versioning tag to the different version of Artifacts and we will upload all those artifacts to the Nexus Sonartype Repository.
+
 
 
 
