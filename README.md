@@ -179,6 +179,7 @@ We will build a Notification system with the help of the Slack server, so we wil
 
 The following screenshot shows that our integration is good and we are receiving both failed and successfully completed job notifications.
 
+
 [![Screenshot-2022-10-26-at-18-12-03.png](https://i.postimg.cc/k5LdVNxX/Screenshot-2022-10-26-at-18-12-03.png)](https://postimg.cc/CZC2XqPW)
 
 
