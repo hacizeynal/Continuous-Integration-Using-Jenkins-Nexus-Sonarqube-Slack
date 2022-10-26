@@ -105,7 +105,7 @@ We will need code on Jenkins pipeline which generate report based on code analys
 
 From Jenkins Tool configuration we will need to add SonarQube Scanner ,then we will need to navigate to Configure Jenkins section and add our private ip and token of SonarQube Scanner for integration.
 
-After successfull run of pipeline we can following logs on console output ,which means that ANALYSIS is successfull and we can check output on our SonarQube Server.
+After successfull run of pipeline we can see following logs on console output ,which means that ANALYSIS is successfull and we can check output on our SonarQube Server.
 
 ```
 INFO: CPD Executor Calculating CPD for 14 files
@@ -123,6 +123,39 @@ INFO: ---------------------------------------------------------
 [![Screenshot-2022-10-26-at-00-39-04.png](https://i.postimg.cc/3rgCbhgd/Screenshot-2022-10-26-at-00-39-04.png)](https://postimg.cc/YjCWhJDH)
 
 
+#### Setting up Quality Sonar Gate
+
+We can configure Quality Sonar Gates on SonarQube and set up some rules and conditions ,at the end of pipeline if our rule will not pass our pipeline job will fail. For example ,we can set a condition that our pipeline will fail if we will have more than 25 bugs. I have added new condition that if Bug count is greater than 25 Job will fail. Let's verify.
+
+```
+Timeout set to expire in 1 hr 0 min
+[Pipeline] {
+[Pipeline] waitForQualityGate
+Checking status of SonarQube task 'AYQTIptAkW0txDCYt5pU' on server 'sonarqubescanner'
+SonarQube task 'AYQTIptAkW0txDCYt5pU' status is 'PENDING'
+SonarQube task 'AYQTIptAkW0txDCYt5pU' status is 'SUCCESS'
+SonarQube task 'AYQTIptAkW0txDCYt5pU' completed. Quality gate is 'ERROR'
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: Pipeline aborted due to quality gate failure: ERROR
+Finished: FAILURE
+
+```
+
+[![Screenshot-2022-10-26-at-09-27-07.png](https://i.postimg.cc/JtV4KxsF/Screenshot-2022-10-26-at-09-27-07.png)](https://postimg.cc/wR2pjhc5)
 
 
 
